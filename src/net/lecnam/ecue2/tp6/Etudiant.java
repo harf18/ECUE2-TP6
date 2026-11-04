@@ -27,6 +27,6 @@ public class Etudiant {
 
     @Override
     public String toString() {
-        return "ine='" + ine + ", nom='" + nom + ", prenom='" + prenom + '\'';
+        return  ine + "," + nom + "," + prenom;
     }
 }

@@ -14,7 +14,7 @@ public class Execute {
 
         exercice4();
 
-        //exercice5();
+        exercice5();
 
         //exercice6();
 
@@ -48,8 +48,8 @@ public class Execute {
 
     }
 
-    private static void exercice5(){
-
+    private static void exercice5() throws IOException {
+        System.out.println(EtudiantService.charge("etudiants.csv"));
 
     }
 

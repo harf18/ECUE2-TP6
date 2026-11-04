@@ -23,4 +23,22 @@ public class EtudiantService {
         }
         Files.write(path, lignes, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
     }
+
+    public static List<Etudiant> charge(String cheminCompletFichier) throws IOException {
+        Path f = Paths.get(cheminCompletFichier);
+        List<String> allLines = Files.readAllLines(f);
+
+        List<Etudiant> listeEtudiants = new ArrayList<>();
+
+        for (String line : allLines) {
+            if (line == null || line.trim().isEmpty()) {
+                continue;
+            }
+
+            String[] parts = line.split(",");
+            Etudiant etudiant = new Etudiant(parts[0], parts[1], parts[2]);
+            listeEtudiants.add(etudiant);
+        }
+        return listeEtudiants;
+    }
 }
