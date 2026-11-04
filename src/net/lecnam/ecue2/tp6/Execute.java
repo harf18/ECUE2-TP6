@@ -10,9 +10,9 @@ public class Execute {
 
         //exercice2();
 
-        exercice3();
+        //exercice3();
 
-        //exercice4();
+        exercice4();
 
         //exercice5();
 
@@ -47,8 +47,15 @@ public class Execute {
 
     }
 
-    private static void exercice4(){
+    private static void exercice4() throws IOException {
 
+        Etudiants etud1 = new Etudiants("56165165gk", "Lissier", "Paul");
+        Etudiants etud2 = new Etudiants("116655651e", "Detekt", "Yves");
+        Etudiants[] listEtud = new Etudiants[2];
+        listEtud[0] = etud1;
+        listEtud[1] = etud2;
+        EtudiantService serv = new EtudiantService();
+        serv.sauve(listEtud, "C:/Users/ELE6a983e3a05dd7/Documents/sauvegarde.csv");
 
     }
 
