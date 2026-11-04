@@ -55,7 +55,7 @@ public class Execute {
         listEtud[0] = etud1;
         listEtud[1] = etud2;
         EtudiantService serv = new EtudiantService();
-        serv.sauve(listEtud, "C:/Users/ELE6a983e3a05dd7/Documents/sauvegarde.csv");
+        serv.sauve(listEtud, "./sauvegarde.csv");
 
     }
 
