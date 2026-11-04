@@ -1,6 +1,9 @@
 package net.lecnam.ecue2.tp6;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Execute {
 
@@ -12,7 +15,7 @@ public class Execute {
 
         exercice3();
 
-        //exercice4();
+        exercice4();
 
         //exercice5();
 
@@ -38,7 +41,26 @@ public class Execute {
     }
 
     private static void exercice4(){
+        Path p = Paths.get(String.valueOf(Paths.get("")), "etudiant.csv");
 
+        try {
+            Files.deleteIfExists(p);
+            Files.createFile(p);
+        } catch (IOException e) {
+            System.out.println();
+        }
+
+        Etudiant[] etudiants = {
+          new Etudiant("Al", "Debaran", "RZ19992831"),
+          new Etudiant("Regulus", "Corneas", "RZ15998456"),
+          new Etudiant("Betelgueuse", "Romani-Contee", "RZ111555658")
+        };
+
+        try {
+            EtudiantService.sauve(etudiants, p.toString());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
