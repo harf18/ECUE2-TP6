@@ -1,0 +1,3 @@
+{INE=1111111, nom='Dujour', prenom='Valentin'}
+{INE=2222222, nom='Andreoli', prenom='Andrea'}
+{INE=3333333, nom='Diop', prenom='Alioune'}
