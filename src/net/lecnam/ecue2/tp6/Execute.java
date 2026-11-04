@@ -13,9 +13,9 @@ public class Execute {
 
         //exercice3();
 
-        exercice4();
+        //exercice4();
 
-        //exercice5();
+        exercice5();
 
         //exercice6();
 
@@ -83,7 +83,20 @@ public class Execute {
     }
 
     private static void exercice5(){
+        EtudiantService service = new EtudiantService();
 
+        try {
+            // Charger les étudiants depuis le fichier CSV
+            Etudiant[] etudiants = service.charge("etudiants.csv");
+
+            // Afficher le nom de chaque étudiant
+            for (Etudiant etudiant : etudiants) {
+                System.out.println(etudiant.getNom());
+            }
+
+        } catch (IOException e) {
+            System.out.println("Erreur de lecture : " + e.getMessage());
+        }
 
     }
 
