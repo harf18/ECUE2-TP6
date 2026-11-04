@@ -17,7 +17,7 @@ public class Execute {
 
         exercice4();
 
-        //exercice5();
+        exercice5();
 
         //exercice6();
 
@@ -64,8 +64,20 @@ public class Execute {
 
     }
 
-    private static void exercice5(){
+    private static void exercice5() {
+        Path p = Paths.get(String.valueOf(Paths.get("")), "etudiant.csv");
+        Etudiant[] etudiants;
 
+        try {
+            etudiants = EtudiantService.charge(p.toString());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        for (Etudiant etudiant : etudiants)
+        {
+            System.out.println(etudiant);
+        }
 
     }
 
