@@ -28,6 +28,7 @@ public class Execute {
         Division.division2(10, 0);
     }
 
+    // La méthode 3 est la meilleur car elle rend l'exception "checked" et force le devellopeur à s'en occuper.
     private static void exercice3() {
         try {
             Division.division3(10, 0);
