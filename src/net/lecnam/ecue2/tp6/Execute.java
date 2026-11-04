@@ -4,9 +4,9 @@ public class Execute {
 
     public static void main(String[] args) {
 
-        exercice1();
+        //exercice1();
 
-        //exercice2();
+        exercice2();
 
         //exercice3();
 
@@ -25,8 +25,9 @@ public class Execute {
     }
 
     private static void exercice2(){
-
-
+        Division div = new Division();
+        double resultat = div.division2(10, 0);
+        System.out.println("Résultat : " + resultat);
     }
 
     private static void exercice3(){
