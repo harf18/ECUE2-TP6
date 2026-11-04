@@ -4,9 +4,9 @@ public class Execute {
 
     public static void main(String[] args) {
 
-        exercice1();
+        //exercice1();
 
-        //exercice2();
+        exercice2();
 
         //exercice3();
 
@@ -26,8 +26,10 @@ public class Execute {
     }
 
     private static void exercice2(){
-
-
+        int a = 10;
+        int b = 0;
+        Division d2 = new Division(a,b);
+        d2.division2();
     }
 
     private static void exercice3(){

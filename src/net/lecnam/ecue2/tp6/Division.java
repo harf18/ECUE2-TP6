@@ -11,11 +11,19 @@ public class Division {
         this.b = b;
     }
 
-    /*Division 1*/
+    /*Exercice 1*/
     public double division1(){
         return this.a/this.b;
     }
 
+    /*Exercice 2*/
+    public double division2(){
+        try{
+            return this.a/this.b;
 
-
+        } catch (Exception e){
+            System.out.println("Division par zéro");
+            return 0.0;
+        }
+    }
 }
