@@ -1,5 +1,7 @@
 package net.lecnam.ecue2.tp6;
 
+import java.io.IOException;
+
 public class Division {
 
     int a;
@@ -21,7 +23,7 @@ public class Division {
         try{
             return this.a/this.b;
 
-        } catch (Exception e){
+        } catch (ArithmeticException e){
             System.out.println("Division par zéro");
             return 0.0;
         }
