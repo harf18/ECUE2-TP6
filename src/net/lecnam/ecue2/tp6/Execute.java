@@ -1,14 +1,16 @@
 package net.lecnam.ecue2.tp6;
 
+import java.io.IOException;
+
 public class Execute {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         //exercice1();
 
-        exercice2();
+        //exercice2();
 
-        //exercice3();
+        exercice3();
 
         //exercice4();
 
@@ -36,8 +38,12 @@ public class Execute {
 
     }
 
-    private static void exercice3(){
+    private static void exercice3() throws IOException {
 
+        int a = 10;
+        int b = 0;
+        Division diviseur = new Division();
+        System.out.println(diviseur.division3(a, b));
 
     }
 
