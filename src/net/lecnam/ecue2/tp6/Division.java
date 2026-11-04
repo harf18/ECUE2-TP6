@@ -12,8 +12,8 @@ public class Division {
         }
         catch (ArithmeticException e){
             System.out.println("Erreur : " + e.getMessage());
-            return a;
         }
+        return a;
     }
 
 }
