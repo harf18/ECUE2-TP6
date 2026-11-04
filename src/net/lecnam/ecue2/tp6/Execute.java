@@ -12,9 +12,9 @@ public class Execute {
 
         //exercice3();
 
-        exercice4();
+        //exercice4();
 
-        //exercice5();
+        exercice5();
 
         //exercice6();
 
@@ -59,8 +59,13 @@ public class Execute {
 
     }
 
-    private static void exercice5(){
+    private static void exercice5() throws IOException{
 
+        EtudiantService serv = new EtudiantService();
+        Etudiants[] listEtud = serv.charge("./sauvegarde.csv");
+        for (Etudiants etudiant : listEtud) {
+            System.out.println(etudiant.toString());
+        }
 
     }
 

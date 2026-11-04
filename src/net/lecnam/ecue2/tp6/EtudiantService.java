@@ -26,4 +26,26 @@ public class EtudiantService {
         }
     }
 
+    public Etudiants[] charge(String cheminCompletFichier) throws IOException {
+        Path path = Paths.get(cheminCompletFichier);
+
+        List<String> lignes = Files.readAllLines(path);
+
+        Etudiants[] etudiants = new Etudiants[lignes.size()];
+
+        for (int i = 0; i < lignes.size(); i++) {
+            String ligne = lignes.get(i);
+
+            String[] donnees = ligne.split(",");
+
+            String ine = donnees[0].replace("\"", "").trim();
+            String nom = donnees[1].replace("\"", "").trim();
+            String prenom = donnees[2].replace("\"", "").trim();
+
+            etudiants[i] = new Etudiants(ine, nom, prenom);
+        }
+
+        return etudiants;
+    }
+
 }
