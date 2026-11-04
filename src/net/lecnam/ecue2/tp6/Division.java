@@ -6,4 +6,14 @@ public class Division {
         return a/b;
     }
 
+    public double division2(int a, int b){
+        try{
+            return a/b;
+        }
+        catch (ArithmeticException e){
+            System.out.println("Erreur : " + e.getMessage());
+            return a;
+        }
+    }
+
 }

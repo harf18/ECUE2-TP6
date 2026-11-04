@@ -4,9 +4,9 @@ public class Execute {
 
     public static void main(String[] args) {
 
-        exercice1();
+        //exercice1();
 
-        //exercice2();
+        exercice2();
 
         //exercice3();
 
@@ -29,6 +29,10 @@ public class Execute {
 
     private static void exercice2(){
 
+        int a = 10;
+        int b = 0;
+        Division diviseur = new Division();
+        System.out.println(diviseur.division2(a, b));
 
     }
 
