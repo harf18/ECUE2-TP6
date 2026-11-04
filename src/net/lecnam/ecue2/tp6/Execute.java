@@ -20,6 +20,10 @@ public class Execute {
 
     private static void exercice1(){
 
+        int a = 10;
+        int b = 0;
+        Division diviseur = new Division();
+        System.out.println(diviseur.division1(a, b));
 
     }
 
