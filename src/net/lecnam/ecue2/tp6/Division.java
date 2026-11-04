@@ -29,7 +29,7 @@ public class Division {
         }
     }
 
-    /*Exercice 3*/
+    /*Exercice 3 : solution pertinente => interception de l'erreur si besoin*/
     public double division3() throws IOException {
         try {
             return this.a / this.b;
