@@ -6,6 +6,7 @@ public class Execute {
 
         exercice1();
 
+
         //exercice2();
 
         //exercice3();
@@ -19,7 +20,11 @@ public class Execute {
     }
 
     private static void exercice1(){
+        Division division = new Division();
 
+        double resultat = division.division1(10, 0);
+
+        System.out.println("Résultat : " + resultat);
 
     }
 
