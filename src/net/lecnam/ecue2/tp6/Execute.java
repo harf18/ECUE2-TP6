@@ -19,7 +19,7 @@ public class Execute {
     }
 
     private static void exercice1(){
-
+        System.out.println(Division.division1(10,0));
 
     }
 
