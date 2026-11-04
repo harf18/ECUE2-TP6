@@ -1,11 +1,11 @@
 package net.lecnam.ecue2.tp6;
 
-public class Etudiants {
+public class Etudiant {
     String ine ;
     String nom;
     String prenom;
 
-    public Etudiants(String ine, String nom, String prenom) {
+    public Etudiant(String ine, String nom, String prenom) {
         this.ine = ine;
         this.nom = nom;
         this.prenom = prenom;

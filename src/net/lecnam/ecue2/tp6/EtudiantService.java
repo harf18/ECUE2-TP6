@@ -9,12 +9,12 @@ import java.util.List;
 
 public class EtudiantService {
 
-    public void sauve(Etudiants[] etudiants, String cheminCompletFichier) throws IOException {
+    public void sauve(Etudiant[] etudiants, String cheminCompletFichier) throws IOException {
         Path path = Paths.get(cheminCompletFichier);
 
         Files.deleteIfExists(path);
 
-        for (Etudiants etudiant : etudiants) {
+        for (Etudiant etudiant : etudiants) {
             Files.writeString(
                     path,
                     etudiant.toString(),
@@ -24,12 +24,12 @@ public class EtudiantService {
         }
     }
 
-    public Etudiants[] charge(String cheminCompletFichier) throws IOException {
+    public Etudiant[] charge(String cheminCompletFichier) throws IOException {
         Path path = Paths.get(cheminCompletFichier);
 
         List<String> lignes = Files.readAllLines(path);
 
-        Etudiants[] etudiants = new Etudiants[lignes.size()];
+        Etudiant[] etudiants = new Etudiant[lignes.size()];
 
         for (int i = 0; i < lignes.size(); i++) {
             String ligne = lignes.get(i).trim();
@@ -44,7 +44,7 @@ public class EtudiantService {
             String nom = elements[1];
             String prenom = elements[2];
 
-            etudiants[i] = new Etudiants(ine, nom, prenom);
+            etudiants[i] = new Etudiant(ine, nom, prenom);
         }
 
         return etudiants;

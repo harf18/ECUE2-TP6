@@ -36,10 +36,10 @@ public class Execute {
     }
 
     private static void exercice4() {
-        Etudiants[] etudiants = new Etudiants[] {
-                new Etudiants("123456789AA", "DUPONT", "Jean"),
-                new Etudiants("987654321BB", "MARTIN", "Sophie"),
-                new Etudiants("456789123CC", "DURAND", "Pierre")
+        Etudiant[] etudiants = new Etudiant[] {
+                new Etudiant("123456789AA", "DUPONT", "Jean"),
+                new Etudiant("987654321BB", "MARTIN", "Sophie"),
+                new Etudiant("456789123CC", "DURAND", "Pierre")
         };
 
         EtudiantService service = new EtudiantService();
@@ -56,9 +56,9 @@ public class Execute {
         EtudiantService service = new EtudiantService();
 
         try {
-            Etudiants[] etudiants = service.charge("etudiants.csv");
+            Etudiant[] etudiants = service.charge("etudiants.csv");
             System.out.println("--- Liste des noms des étudiants chargés ---");
-            for (Etudiants etudiant : etudiants) {
+            for (Etudiant etudiant : etudiants) {
                 System.out.println(etudiant.getNom());
             }
         } catch (IOException e) {
