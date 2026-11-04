@@ -10,9 +10,9 @@ public class Execute {
 
         //exercice2();
 
-        exercice3();
+        //exercice3();
 
-        //exercice4();
+        exercice4();
 
         //exercice5();
 
@@ -42,9 +42,21 @@ public class Execute {
         }
     }
 
-    private static void exercice4(){
+    private static void exercice4() {
+        Etudiants[] etudiants = new Etudiants[] {
+                new Etudiants("123456789AA", "DUPONT", "Jean"),
+                new Etudiants("987654321BB", "MARTIN", "Sophie"),
+                new Etudiants("456789123CC", "DURAND", "Pierre")
+        };
 
+        EtudiantService service = new EtudiantService();
 
+        try {
+            service.sauve(etudiants, "etudiants.csv");
+            System.out.println("Le fichier etudiants.csv a été créé avec succès à la racine du projet.");
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la sauvegarde du fichier : " + e.getMessage());
+        }
     }
 
     private static void exercice5(){
