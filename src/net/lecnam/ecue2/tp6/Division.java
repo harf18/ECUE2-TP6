@@ -5,7 +5,6 @@ import java.io.IOException;
 public class Division {
 
     // Exercice 1
-    // Solution simple, mais ne gère pas l'exception.
     public double division1(int a, int b) {
         return a / b;
     }
