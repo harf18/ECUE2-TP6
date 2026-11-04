@@ -20,6 +20,8 @@ public class Division {
     }
 
     // Exercice 3
+    // La solution 3 est pertinente car elle oblige
+    // le développeur à gérer l'exception.
     public double division3(int a, int b) throws IOException {
         try {
             return a / b;
