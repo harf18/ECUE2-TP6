@@ -10,9 +10,9 @@ public class Execute {
 
         //exercice2();
 
-        exercice3();
+        //exercice3();
 
-        //exercice4();
+        exercice4();
 
         //exercice5();
 
@@ -59,6 +59,19 @@ public class Execute {
 
     private static void exercice4() {
 
+        Etudiants[] etudiants = {
+                new Etudiants("1234567890A", "Alice", "Martin"),
+                new Etudiants("2345678901B", "Bob", "Durand"),
+                new Etudiants("3456789012C", "Chloé", "Bernard")
+        };
+
+        EtudiantService service = new EtudiantService();
+        try {
+            service.sauve(etudiants, "etudiants.csv");
+            System.out.println("Fichier etudiants.csv créé");
+        } catch (IOException e) {
+            System.out.println("Erreur : " + e.getMessage());
+        }
     }
 
     private static void exercice5() {
