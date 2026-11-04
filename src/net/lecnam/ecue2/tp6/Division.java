@@ -1,8 +1,11 @@
 package net.lecnam.ecue2.tp6;
 
+import java.io.IOException;
+
 public class Division {
 
     // Exercice 1
+    // Solution simple, mais ne gère pas l'exception.
     public double division1(int a, int b) {
         return a / b;
     }
@@ -14,6 +17,15 @@ public class Division {
         } catch (ArithmeticException e) {
             System.out.println("Erreur : division par zéro impossible !");
             return -1;
+        }
+    }
+
+    // Exercice 3
+    public double division3(int a, int b) throws IOException {
+        try {
+            return a / b;
+        } catch (ArithmeticException e) {
+            throw new IOException("Erreur : division par zéro impossible !");
         }
     }
 
