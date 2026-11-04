@@ -28,4 +28,14 @@ public class Division {
             return 0.0;
         }
     }
+
+    /*Exercice 3*/
+    public double division3() throws IOException {
+        try {
+            return this.a / this.b;
+
+        } catch (ArithmeticException e) {
+            throw new IOException("Erreur : division par zéro interdite !", e);
+        }
+    }
 }
