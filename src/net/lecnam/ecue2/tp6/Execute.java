@@ -11,9 +11,9 @@ public class Execute {
 
         //exercice2();
 
-        exercice3();
+        //exercice3();
 
-        //exercice4();
+        exercice4();
 
         //exercice5();
 
@@ -55,6 +55,29 @@ public class Execute {
     }
 
     private static void exercice4(){
+
+        // Création des étudiants
+        Etudiant e1 = new Etudiant("123456", "DIOP", "Alioune");
+        Etudiant e2 = new Etudiant("234567", "DUPONT", "Jean");
+        Etudiant e3 = new Etudiant("345678", "MARTIN", "Paul");
+        Etudiant e4 = new Etudiant("456789", "DURAND", "Marie");
+
+        // Création du tableau
+        Etudiant[] etudiants = {e1, e2, e3, e4};
+
+        // Création du service
+        EtudiantService service = new EtudiantService();
+
+        // Enregistrement dans le fichier CSV
+        try {
+            service.sauve(etudiants, "etudiants.csv");
+
+            System.out.println("Fichier etudiants.csv créé avec succès !");
+
+        } catch (IOException e) {
+            System.out.println("Erreur lors de la création du fichier : "
+                    + e.getMessage());
+        }
 
 
     }
