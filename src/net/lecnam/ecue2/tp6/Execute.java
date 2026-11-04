@@ -18,33 +18,36 @@ public class Execute {
 
     }
 
-    private static void exercice1(){
+    public static double division1(int a, int b) {
+        return (double) a / b;
+    }
 
+    private static void exercice1() {
+
+        int a = 7;
+        int b = 2;
+
+        double resultat = division1(a, b);
+        System.out.println(a + " / " + b + " = " + resultat);
+    }
+
+    private static void exercice2() {
 
     }
 
-    private static void exercice2(){
-
-
-    }
-
-    private static void exercice3(){
-
+    private static void exercice3() {
 
     }
 
-    private static void exercice4(){
-
-
-    }
-
-    private static void exercice5(){
-
+    private static void exercice4() {
 
     }
 
-    private static void exercice6(){
+    private static void exercice5() {
 
+    }
+
+    private static void exercice6() {
 
     }
 
