@@ -19,8 +19,7 @@ public class Execute {
     }
 
     private static void exercice1(){
-
-
+        Division.division1(10, 0);
     }
 
     private static void exercice2(){
