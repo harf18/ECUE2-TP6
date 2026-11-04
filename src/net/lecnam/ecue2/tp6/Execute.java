@@ -10,9 +10,9 @@ public class Execute {
 
         //exercice2();
 
-        exercice3();
+        //exercice3();
 
-        //exercice4();
+        exercice4();
 
         //exercice5();
 
@@ -38,7 +38,12 @@ public class Execute {
         System.out.println("Le résultat est : " + resultat);
     }
 
-    private static void exercice4(){
+    private static void exercice4() throws IOException {
+        Etudiant etudiant1 = new Etudiant("105JHJIDVI", "DELAFONTAINE", "JEAN");
+        Etudiant etudiant2 = new Etudiant("67485JDOIHEIHB", "LACASA", "YVES");
+        Etudiant etudiant3 = new Etudiant("78749DHEUIH", "MEGAKARCHA", "Cynthia");
+
+        EtudiantService.sauve(new Etudiant[] { etudiant1, etudiant2, etudiant3 }, "etudiants.csv");
 
 
     }
